@@ -1,16 +1,20 @@
-def maxProfit(prices):
-    min_price = prices[0]
-    max_profit = 0
+class Solution:
+    def maxProfit(self, prices):
+        min_price = prices[0]
+        max_profit = 0
+
+        for price in prices:
+            min_price = min(min_price, price)
+
+            profit = price - min_price
+
+            max_profit = max(max_profit, profit)
+
+        return max_profit
     
-    for price in prices:
-        min_price = min(min_price, price)
+prices = [7, 1, 5, 3, 6, 4]
 
-        profit = price - min_price
+solution = Solution()
+result = solution.maxProfit(prices)
 
-        max_profit = max(max_profit, profit)
-
-    return max_profit
-
-prices =[7,1,5,3,6,4]
-result = maxProfit(prices)
 print(result)
