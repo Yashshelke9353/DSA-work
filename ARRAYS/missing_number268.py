@@ -21,7 +21,7 @@ class Solution:
         for i in range(0, n + 1):
             if i not in nums:
                 return i
-            
+#mhanje pahile purn aray chi length gheun tyatun 0 to n oaryant loop chalvun jo number nums madhe nahiye to return karun dila
     
 nums = [3, 0, 1]   # 
 solution = Solution()
