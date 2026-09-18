@@ -27,7 +27,23 @@
 
 # [5,6,7,1,2,3,4]
 
-class Solution:
+class Solution1:
+    def rotate(self, nums, k):
+
+        n = len(nums)
+
+        k = k % n
+
+        # Reverse entire array
+        nums.reverse()
+
+        # Reverse first k elements
+        nums[:k] = reversed(nums[:k])
+
+        # Reverse remaining elements
+        nums[k:] = reversed(nums[k:])
+
+class Solution2:
     def rotate(self, nums, k):
         """
         :type nums: List[int]
@@ -61,7 +77,7 @@ class Solution:
 
 
 #anothe rsimple solution
-class Solution2(object):
+class Solution3(object):
    def rotate(self, nums, k):
        n=len(nums)
        k=n%k
